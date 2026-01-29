@@ -38,14 +38,14 @@ jobs:
           uses: actions/checkout@v4
 
         - name: "Uploads as an artifact"
-          uses: actions/uploads-artifact@v4
+          uses: actions/upload-artifact@v4
           with:
             name: "sample-artifact"
             path: "index.html"
             retention-days: 60
 
         - name: "Uploads as a second artifact"
-          uses: actions/uploads-artifact@v4
+          uses: actions/upload-artifact@v4
           with:
             name: "sample-artifact2"
             path: "index.html"
