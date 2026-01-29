@@ -33,6 +33,25 @@ jobs:
         - name: "confirm the job"
           run: |
            echo "This is the second job"
+            
+        - name: "checkout"
+          uses: actions/checkout@v4
+
+        - name: "Uploads as an artifact"
+          uses: actions/uploads-artifact@v4
+          with:
+            name: "sample-artifact"
+            path: "index.html"
+            retention-days: 60
+
+        - name: "Uploads as an artifact"
+          uses: actions/uploads-artifact@v4
+          with:
+            name: "sample-artifact2"
+            path: "index.html"
+            retention-days: 60   
+
+
         - name: "pull the image from dockerhub into the environment"
           run: |
             docker pull olaranmmy/testimage100
