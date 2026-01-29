@@ -44,7 +44,7 @@ jobs:
             path: "index.html"
             retention-days: 60
 
-        - name: "Uploads as an artifact"
+        - name: "Uploads as a second artifact"
           uses: actions/uploads-artifact@v4
           with:
             name: "sample-artifact2"
