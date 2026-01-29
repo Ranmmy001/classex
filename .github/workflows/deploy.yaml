@@ -21,7 +21,7 @@ jobs:
 
       - name: "push to Dockerhub"
         run:   |
-            docker login -u olaranmmy -p ${{secrets.DOCKER_PASSWORD}}
+            docker login -u olaranmmy -p "${{secrets.DOCKER_PASSWORD}}"
             docker push olaranmmy/testimage100
             echo "image pushed successfully!"
 
